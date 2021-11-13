@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HuevosVillaReal</string>
+    <string name="txtwelcome">Welcome</string>
+    <string name="txtusername">Username</string>
+    <string name="txtpassword">Password</string>
+    <string name="txtlogin">if you don´t have Account</string>
+    <string name="txtsign">Sign Up</string>
+    <string name="txtregistration">Registration</string>
+    <string name="txtname">Names</string>
+    <string name="txtlastname">Last Names</string>
+    <string name="txtemail">E-Mail</string>
+    <string name="txtpolitica">Politica</string>
+    <string name="txtsave">Save</string>
+
+</resources>
