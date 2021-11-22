@@ -50,7 +50,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void onClick(View view) {
         if(E1.getText().toString().equals("jhon377") && E2.getText().toString().equals("1234")) {
-            Intent SA = new Intent(view.getContext(), MainActivity4.class);
+            Intent SA = new Intent(MainActivity2.this, MainActivity4.class);
             startActivity(SA);
         }
         else

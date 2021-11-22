@@ -320,6 +320,10 @@ información de la cual es titular.</string>
     <string name="txtsave">Save</string>
     <string name="txtuserincorrect">User o Password Incorrect</string>
     <string name="txtregist">Register new account</string>
+    <string name="txtpolicy">Policy</string>
+    <string name="txtcheckbox">confirm acceptance of the policy</string>
+    <string name="apertura">Apertura</string>
+    <string name="cierre">Cierre</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

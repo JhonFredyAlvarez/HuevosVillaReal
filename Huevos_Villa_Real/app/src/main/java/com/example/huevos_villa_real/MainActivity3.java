@@ -1,5 +1,7 @@
 package com.example.huevos_villa_real;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -7,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,8 +18,9 @@ public class MainActivity3 extends AppCompatActivity {
     int op=0;
     LinearLayout CONTE;
     Fragment FRAG;
-    Button B1;
-    EditText E1,E2,E3,E4;
+    Button B1,BSAVE;
+    EditText E1,E2,E3,E4,E5;
+    CheckBox c;
 
 
     @Override
@@ -26,10 +30,15 @@ public class MainActivity3 extends AppCompatActivity {
         CONTE=(LinearLayout) findViewById(R.id.contenedor);
         CONTE.setVisibility(View.INVISIBLE);
         B1=(Button) findViewById(R.id.b1);
+        BSAVE=(Button) findViewById(R.id.bsave);
         E1=(EditText) findViewById(R.id.e1);
         E2=(EditText) findViewById(R.id.e2);
         E3=(EditText) findViewById(R.id.e3);
         E4=(EditText) findViewById(R.id.e4);
+        E5=(EditText) findViewById(R.id.e5);
+        c=(CheckBox) findViewById(R.id.c);
+        BSAVE.setVisibility(View.INVISIBLE);
+
     }
 
     public void metodopolitica(View view) {
@@ -41,10 +50,10 @@ public class MainActivity3 extends AppCompatActivity {
                 op=1;
                 cargarFragmento(FRAG);
                 break;
-            case 1:
+            /*case 1:
                 CONTE.setVisibility(View.INVISIBLE);
                 op=2;
-                break;
+                break;*/
 
 
         }
@@ -56,4 +65,24 @@ public class MainActivity3 extends AppCompatActivity {
         transaction.replace(R.id.fragment,frag);
         transaction.commit();
     }
-}
+
+
+    public void onClick(View view) {//(view.getId()==R.id.c)
+        if(c.isChecked()){
+            BSAVE.setVisibility(View.VISIBLE);
+        }
+        else{
+            BSAVE.setVisibility(View.INVISIBLE);
+        }
+
+    }
+
+    public void cambio(View view){
+        Intent SA=new Intent(view.getContext(),MainActivity2.class);
+        startActivity(SA);
+        }
+
+    }
+
+
+
