@@ -1,6 +1,7 @@
 package com.example.huevos_villa_real;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ public class MainActivity2 extends AppCompatActivity {
     EditText E1,E2;
     Button B1;
     TextView TS;
+    GestorDB DB;
 
 
     @Override
@@ -28,6 +30,7 @@ public class MainActivity2 extends AppCompatActivity {
         B1=(Button) findViewById(R.id.b1);
         TS=(TextView)findViewById(R.id.txtsign);
         registerForContextMenu(TS);
+        DB=new GestorDB(this);
 
     }
 
@@ -49,8 +52,39 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        if(E1.getText().toString().equals("jhon377") && E2.getText().toString().equals("1234")) {
-            Intent SA = new Intent(MainActivity2.this, MainActivity4.class);
+        Cursor res=DB.getData(E1.getText().toString());
+        String user=null;
+        String pass=null;
+        String username,password;
+        int v1,v2;
+        username=E1.getText().toString();
+        password=E2.getText().toString();
+        //validacion
+        v1=validarDatos(1,username);
+        v2=validarDatos(1,password);
+        if (v1!=1 || v2!=1)
+        {
+            Toast toast= Toast.makeText(this,"",Toast.LENGTH_SHORT);
+            toast.setText(R.string.txtok);
+            toast.setGravity(Gravity.CENTER,0,0);
+            toast.show();
+        }
+        else
+        {
+            Toast toast= Toast.makeText(this,"",Toast.LENGTH_LONG);
+            toast.setText(R.string.txtuserincorrect);
+            toast.setGravity(Gravity.CENTER,0,0);
+            toast.show();
+        }
+
+        if(res.moveToFirst())
+        {
+            user=res.getString(4);
+            pass=res.getString(5);
+        }
+        
+        if(E1.getText().toString().equals(user) && E2.getText().toString().equals(pass)) {
+            Intent SA = new Intent(MainActivity2.this, MainActivity5.class);
             startActivity(SA);
         }
         else
@@ -63,6 +97,35 @@ public class MainActivity2 extends AppCompatActivity {
 
             }
         }
+
+    private int validarDatos(int i, String cadena) {
+        int validacion=1, c, pos;
+        switch (i) {
+            case 1:
+                for (pos = 0; pos < cadena.length(); pos = pos + 1) {
+                    c = cadena.charAt(pos);
+                    if (c < 65 || c > 90) {
+                        validacion = 0;
+                        pos = cadena.length();
+                    }
+
+                }
+                break;
+
+            case 2:
+                for (pos = 0; pos < cadena.length(); pos = pos + 1) {
+                    c = cadena.charAt(pos);
+                    if (c < 48 || c > 57) {
+                        validacion = 0;
+                        pos = cadena.length();
+                    }
+
+                }
+                break;
+        }
+        return validacion;
+    }
+
     }
 
 

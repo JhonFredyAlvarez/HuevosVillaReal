@@ -2,6 +2,7 @@ package com.example.huevos_villa_real;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -21,6 +22,7 @@ public class MainActivity3 extends AppCompatActivity {
     Button B1,BSAVE;
     EditText E1,E2,E3,E4,E5;
     CheckBox c;
+    GestorDB DB;
 
 
     @Override
@@ -38,6 +40,7 @@ public class MainActivity3 extends AppCompatActivity {
         E5=(EditText) findViewById(R.id.e5);
         c=(CheckBox) findViewById(R.id.c);
         BSAVE.setVisibility(View.INVISIBLE);
+        DB=new GestorDB(this);
 
     }
 
@@ -78,9 +81,12 @@ public class MainActivity3 extends AppCompatActivity {
     }
 
     public void cambio(View view){
+        DB.insertData(E1.getText().toString(),E2.getText().toString(),E3.getText().toString(),E4.getText().toString(),E5.getText().toString());
         Intent SA=new Intent(view.getContext(),MainActivity2.class);
         startActivity(SA);
         }
+
+
 
     }
 
