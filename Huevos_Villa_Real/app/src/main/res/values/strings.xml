@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HuevosVillaReal</string>
+    <string name="app_name">Huevos Villa Real</string>
     <string name="txtwelcome">Welcome</string>
     <string name="txtusername">Username</string>
     <string name="txtpassword">Password</string>
@@ -9,6 +9,7 @@
     <string name="txtname">Names</string>
     <string name="txtlastname">Last Names</string>
     <string name="txtemail">E-Mail</string>
+    <string name="txtok">OK</string>
     <string name="txtpolitica">        POLÍTICAS DE PRIVACIDAD Y CONDICIONES DE USO DE DATOS
 1. GENERALIDADES:
 
