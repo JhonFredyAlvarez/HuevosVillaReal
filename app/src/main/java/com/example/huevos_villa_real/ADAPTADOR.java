@@ -29,6 +29,7 @@ public class ADAPTADOR extends RecyclerView.Adapter<ADAPTADOR.ProductoViewHolder
     @Override
     public void onBindViewHolder(@NonNull ProductoViewHolder productoViewHolder, int i) {
         productoViewHolder.NombreProducto.setText(PRODUCTOS.get(i).NOMBRE);
+        productoViewHolder.PrecioProducto.setText(PRODUCTOS.get(i).PRECIO);
         productoViewHolder.ImagenProducto.setImageResource(PRODUCTOS.get(i).Imgid);
     }
 
@@ -47,11 +48,13 @@ public class ADAPTADOR extends RecyclerView.Adapter<ADAPTADOR.ProductoViewHolder
     public class ProductoViewHolder extends RecyclerView.ViewHolder {
         CardView cardView;
         TextView NombreProducto;
+        TextView PrecioProducto;
         ImageView ImagenProducto;
         public ProductoViewHolder(@NonNull View itemView) {
             super(itemView);
             cardView=(CardView)itemView.findViewById(R.id.Card);
             NombreProducto=(TextView)itemView.findViewById(R.id.t1Card);
+            PrecioProducto=(TextView)itemView.findViewById(R.id.t1Card2);
             ImagenProducto=(ImageView)itemView.findViewById(R.id.imgCard);
         }
     }

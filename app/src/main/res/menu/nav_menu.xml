@@ -9,4 +9,9 @@
         android:id="@+id/op2Nav"
         android:icon="@drawable/ic_comprar"
         android:title="Comprar"/>
+
+    <item
+        android:id="@+id/op3Nav"
+        android:icon="@drawable/ic_info"
+        android:title="Información"/>
 </menu>

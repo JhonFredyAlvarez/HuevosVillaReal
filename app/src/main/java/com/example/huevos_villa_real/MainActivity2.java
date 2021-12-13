@@ -24,7 +24,7 @@ public class MainActivity2 extends AppCompatActivity {
     TextView TS;
     //GestorDB DB;
     FirebaseFirestore DB_FIRE;
-    TextView TP;
+    TextView TP,TP1,TS1;
 
 
     @Override
@@ -34,9 +34,11 @@ public class MainActivity2 extends AppCompatActivity {
         E1 = (EditText) findViewById(R.id.e1);
         E2 = (EditText) findViewById(R.id.e2);
         B1 = (Button) findViewById(R.id.b1);
-        TS = (TextView) findViewById(R.id.txtsign);
-        TP =(TextView)findViewById(R.id.txtpolitica);
-        registerForContextMenu(TS);
+        TS = (TextView) findViewById(R.id.txtsign2);
+        TS1 = (TextView) findViewById(R.id.txtsign);
+        TP =(TextView)findViewById(R.id.txtpolitica2);
+        TP1 =(TextView)findViewById(R.id.txtpolitica);
+        registerForContextMenu(TS1);
         //DB = new GestorDB(this);
 
         DB_FIRE=FirebaseFirestore.getInstance();
@@ -60,19 +62,29 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        String user = null;
+        String user =null;
         String pass = null;
         String username, password;
         boolean v1, v2;
         username = E1.getText().toString();
         password = E2.getText().toString();
-        if(username=="" && password=="") {
+        if(username==user && password==pass) {
             Toast toast= Toast.makeText(this,"",Toast.LENGTH_LONG);
             toast.setText("Debe de ingresar datos");
             toast.setGravity(Gravity.CENTER,0,0);
             toast.show();
 
         }
+        /*else
+        {
+
+                    Toast toast= Toast.makeText(this,"",Toast.LENGTH_LONG);
+                    toast.setText(R.string.txtuserincorrect);
+                    toast.setGravity(Gravity.CENTER,0,0);
+                    toast.show();
+
+
+        }*/
 
         DB_FIRE.collection("USUARIOS").document(username)
                 .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -81,13 +93,13 @@ public class MainActivity2 extends AppCompatActivity {
             TP.setText(documentSnapshot.get("USUARIO").toString());
             TS.setText(documentSnapshot.get("CONTRASEÑA").toString());
                 if(E1.getText().toString().equals(TP.getText().toString()) && E2.getText().toString().equals(TS.getText().toString())) {
-                    Intent SA = new Intent(MainActivity2.this, MainActivity5.class);
+                    Intent SA = new Intent(MainActivity2.this, MainActivity4.class);
                     startActivity(SA);
 
                 }
                 else
                 {
-                    TP.setText("Usuario y/o contraseña incorrecta");
+                    TP1.setText("Usuario y/o contraseña incorrecta");
                     /*Toast toast= Toast.makeText(this,"",Toast.LENGTH_LONG);
                     toast.setText(R.string.txtuserincorrect);
                     toast.setGravity(Gravity.CENTER,0,0);

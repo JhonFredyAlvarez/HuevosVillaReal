@@ -10,19 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Huevos_Villa_Real">
         <activity
-            android:name=".MainActivity5"
+            android:name=".MainActivity6"
             android:exported="false" />
+        <activity
+            android:name=".MainActivity5"
+            android:exported="true" />
         <activity
             android:name=".MainActivity4"
             android:exported="true"
             android:label="@string/txtwelcome"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".MainActivity3"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity2"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -27,7 +27,7 @@ public class MainActivity5 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main5);
         db=FirebaseFirestore.getInstance();
         LISTAPRODUCTOS=(RecyclerView)findViewById(R.id.lista);
         LISTAPRODUCTOS.setHasFixedSize(true);
@@ -35,13 +35,14 @@ public class MainActivity5 extends AppCompatActivity {
         LISTAPRODUCTOS.setLayoutManager(layoutManager);
         ADAPTADOR adaptador=new ADAPTADOR(PRODUCTOS);
         inicializaDATOS();
+        inicializaADAPTADOR();
 
     }
 
     private void inicializaDATOS() {
         PRODUCTOS=new ArrayList<>();
         int i;
-        db.collection("PRODUCTOS")
+        /*db.collection("PRODUCTOS")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -56,7 +57,9 @@ public class MainActivity5 extends AppCompatActivity {
                             Log.w(TAG, "Error getting documents.", task.getException());
                         }
                     }
-                });
+                });*/
+        PRODUCTOS.add(new Producto("Huevo A10","$15000",R.drawable.a10));
+        PRODUCTOS.add(new Producto("Huevo AA","$18000",R.drawable.doblea));
 /*
         PRODUCTOS.add(new Producto("hola",R.drawable.ic_launcher_background));
         PRODUCTOS.add(new Producto("como",R.drawable.ic_launcher_background));

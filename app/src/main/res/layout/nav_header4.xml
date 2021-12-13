@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Huevos Villa Real"
-        android:textColor="@color/black"
+        android:textColor="@color/gold"
         android:layout_margin="20dp"
         android:gravity="center"/>
 

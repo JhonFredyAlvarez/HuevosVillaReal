@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
         <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/drawable/ic_comprar.xml" value="0.1" />
+        <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/drawable/ic_launcherhvr_background.xml" value="0.2203125" />
         <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/drawable/ic_productos.xml" value="0.2203125" />
         <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/drawable/ic_productos_background.xml" value="0.2203125" />
         <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/layout/activity_main.xml" value="0.12771739130434784" />
@@ -11,8 +14,9 @@
         <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/layout/activity_main3.xml" value="0.16" />
         <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/layout/activity_main4.xml" value="0.18" />
         <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/layout/activity_main5.xml" value="0.1" />
+        <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/layout/activity_main6.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/layout/app_bar4.xml" value="0.1" />
-        <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/layout/cardview.xml" value="0.11206896551724138" />
+        <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/layout/cardview.xml" value="0.18" />
         <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/layout/content_main4.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/layout/ensayo.xml" value="0.1" />
         <entry key="..\:/Users/jfao3/AndroidStudioProjects/Huevos_Villa_Real/app/src/main/res/layout/fragment_fragmento1.xml" value="0.20416666666666666" />
